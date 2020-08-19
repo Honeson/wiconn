@@ -1,0 +1,627 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome to Wiconn</title>
+    <link rel="stylesheet" href="{% static 'css/W3.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+
+
+
+<style>
+    body {
+        font-family: 'Montserrat';
+        font-size: 16px
+    }
+
+.foi-header.landing-header{
+    background-image: url("{% static 'images/mockup/big.png' %}"), url("{% static 'images/mockup/sun.png' %}");
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-size: 167px, 60%;
+    background-position: left bottom, right top;
+    }
+
+.foi-footer {
+    background-image: url("{% static 'images/mockup/footer_try.png' %}");
+}
+.checked {
+    color: orange;
+}
+
+.coo {
+    background-color: #4460f0;
+    padding: 5px;
+}
+
+
+.para {
+    font-size: x-large; 
+    margin-left: 40px;
+}
+@media screen and (max-width: 480px) {
+    .para {
+    margin-left: 5px;
+  }
+    
+}
+
+.aboutf {
+    font-size: 15px;
+    line-height: 2.33;
+    font-weight: 600;
+    color: #fefefe;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+</style>
+
+</head>
+
+<body">
+    <header class="foi-header landing-header" style="margin-left: 2px;">
+
+        <nav class="navbar navbar-expand-md navbar-light">
+            <a href="{% url 'home' %}" class="navbar-brand">
+                <img src="{% static 'images/mockup/WEICON5.svg' %}" style="width: 100px; height: 100px;" alt="Wiconn Logo">
+                
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ml-auto coo">
+                    
+                    <a class="nav-item nav-link" href="{% url 'home' %}"
+                    style="color: white;">Home <span class="sr-only">(current)</span></a>
+                    <a href="#about" class="nav-item nav-link" style="color: white;">About</a>
+                    <a href="#features" class="nav-item nav-link" style="color: white;">How It Works</a>
+                    <a href="#FAQ" class="nav-item nav-link" style="color: white;">FAQs</a>
+                    <a href="#contact" class="nav-item nav-link" style="color: white;">Contact</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            
+            <div class="header-content">
+                <div class="row" >
+                    <div class="col-md-6">
+                        <br><br>
+                        <h1 class="w3-center">THE NEXT GENERATION OF MOBILE TECHNOLOGY</h1>
+                        <p></p> 
+                        <br>
+                        <br>
+                        <p></p>
+                        <p class="text-dark w3-center para" 
+                        >Wiconn is a mobile App that lets you earn money monthly while communicating with
+                            your friends for free even when you don't have internet access on your phone.
+                        </p>
+                        <button class="btn btn-primary mb-4 " 
+                        style="margin-left: 230px; background-color: #4460f0;">Get Started</button>
+                        <div class="my-2">
+                            <p class="header-app-download-title"
+                            style="margin-left: 203px;">GET OUR MOBILE APP</p>
+                        </div>
+                        <div style="margin-left: 120px;">
+                        <div class="w3-container w3-cell" style="margin-left: 50px;">
+                        
+                           <a href="#"> <img src="{% static 'images/apple.png' %}" alt="App store"
+                            class="w3-image" 
+                            style="width: 125px; height: 35px; margin-top: 8px;"></a>
+                        </div>
+                        <div class="w3-container w3-cell">
+                            <a href="#"><img src="{% static 'images/google.png' %}" alt="play store"
+                            class="w3-image"  
+                            style="width: 135px; height: 53px;"></a>
+                        </div>
+                       </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="{% static 'images/mockup/m6.png' %}" alt="app"
+                        class="ifluid">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="py-5 mb-5">
+        <div class="container">
+            <a id="about"> <h1 class="section-title w3-center">Application Features</h1> </a>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                   <p class="w3-center"><img src="{% static 'images/wif.jpg' %}" alt="No Internet"
+                    class="w3-image" style="width: 60px; height: 50px;"></p>
+                    <h3 class="w3-center" style="padding-top: 15px;">No Internet Required</h3>
+                    <p></p>
+                    <p class="text-dark"
+                    style="font-size: x-large;">Works even without any internet connection or mobile reception.
+                        Devices connect directly with one another using Bluetooth and Wifi within 300 feet of
+                        their location
+                    </p>
+                </div>
+                <div class="col-lg-4 mb-3 mb-lg-0">
+                    <p class="w3-center"><img src="{% static 'images/security.png' %}" alt="security"
+                        class="w3-image" style="width: 60px; height: 60px;"></p>
+                    <h3 class="w3-center" style="padding-top: 6px;"> Security</h3>
+                    <p></p>
+                    <p class="text-dark"
+                    style="font-size: x-large;">Wiconn is empowered with end to end encryption, self destruct 
+                    messaging and ability to prevent your chat from being screenshot; this features ensure 
+                    the safety and security of our users.
+                </p>
+                    
+                </div>
+                <div class="col-lg-4 mb-3 mb-lg-0">
+                    <p class="w3-center"><img src="{% static 'images/secu.jpg' %}" alt="earn"
+                        class="w3-image" style="width: 60px; height: 60px;"></p>
+                    <h3 class="w3-center" style="padding-top: 6px;">Earn with Wiconn</h3>
+                    <p></p>
+                    <p class="text-dark"
+                    style="font-size: x-large; padding-left: 6px;">Earn money with Wiconn by watching video and interstitial ads
+                    on the portion of the app called TV Ads; the more time you spend watching Ads on Wiconn TV Ads
+                    the more money you make.
+                </p>
+                </div>
+           
+            </div>
+        </div>
+    </section>
+    <section class="py-5 mb-5">
+        <div class="container">
+            <div class="w3-row">
+                <div class="w3-half mb-5 mb-md-0">
+
+                    <div id="landingClientCarousel" class="carousel slide landing-client-carousel" data-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item active">
+                                <div class="d-flex flex-wrap justify-content-center">
+                                    <img src="{% static 'images/mockops/m1.png' %}" alt="special offers" class="ifluid" width="592px">   
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="d-flex flex-wrap justify-content-center">
+                                    <img src="{% static 'images/mockops/m2.png' %}" alt="special offers" class="ifluid" >
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="d-flex flex-wrap justify-content-center">
+                                    <img src="{% static 'images/mockops/m3.png' %}" alt="special offers" class="ifluid" width="592px">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="d-flex flex-wrap justify-content-center">
+                                    <img src="{% static 'images/mockops/m4.png' %}" alt="special offers" class="ifluid" width="592px">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="d-flex flex-wrap justify-content-center">
+                                    <img src="{% static 'images/mockops/m5.png' %}" alt="special offers" class="ifluid" width="592px">
+                                </div>
+                            </div>
+                        </div>
+                        <ol class="carousel-indicators">
+                            <li data-target="#landingClientCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#landingClientCarousel" data-slide-to="1"></li>
+                            <li data-target="#landingClientCarousel" data-slide-to="2"></li>
+                            <li data-target="#landingClientCarousel" data-slide-to="3"></li>
+                            <li data-target="#landingClientCarousel" data-slide-to="4"></li>
+                        </ol>
+                    </div>
+
+
+                    
+                </div>
+                <div class="w3-half w3-center">
+                    <a id="features"><h2 class="section-title">HOW IT WORKS</h2> </a>
+                    <p></p>
+                    <p class="mb-5 w3-xlarge">Wiconn meaning wireless connect is a free peer-to-peer messaging Application
+                        that works with or without internet access or cellular reception to send text and images.
+                        Wiconn works by using the Bluetooth and Wifi radios located on your phone to communicate
+                        directly with other devices within 300 feet apart. Wiconn works even when mobile
+                        telecommunication fails us.
+                        <h6 class="text-gray font-os font-weight-semibold">Trusted by the world's best</h6>
+        <div id="landingClientCarousel" class="carousel slide landing-client-carousel" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <div class="d-flex flex-wrap justify-content-center">
+                        <div class="clients-logo">
+                            <img src="{% static 'images/clients/slack.svg' %}" alt="Slack" class="img-fluid">
+                        </div>
+                        <div class="clients-logo">
+                            <img src=" {% static 'images/partners/startapp.jpg' %}"
+                             alt="startapp" class="img-fluid"
+                             style="height: 38.5px;">
+                        </div>
+                        <div class="clients-logo">
+                            <img src=" {% static 'images/partners/admixer.jpg' %}"
+                            alt="admixer" class="img-fluid"
+                            style="height: 38.5px;">
+                        </div>
+                        <div class="clients-logo">
+                            <img src=" {% static 'images/partners/airpush.jpg' %}"
+                            alt="airpush" class="img-fluid"
+                            style="height: 38.5px;">
+                        </div>
+                        <div class="clients-logo">
+                            <img src="{% static 'images/clients/samsung.svg' %}" alt="Samsung" class="img-fluid">
+                        </div>
+                        <div class="clients-logo">
+                            <img src="{% static 'images/clients/paypal.svg' %}" alt="Paypal" class="img-fluid">
+                        </div>
+                        <div class="clients-logo">
+                            <img src="{% static 'images/clients/spotify.svg' %}" alt="Spotify" class="img-fluid">
+                        </div>
+                        <div class="clients-logo">
+                            <img src="{% static 'images/clients/amazon.svg' %}" alt="Amazon" class="img-fluid">
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex flex-wrap justify-content-center">
+                        <div class="clients-logo">
+                            <img src="{% static 'images/clients/slack.svg' %}" alt="Slack" class="img-fluid">
+                        </div>
+                        <div class="clients-logo">
+                            <img src=" {% static 'images/partners/startapp.jpg' %}"
+                             alt="startapp" class="img-fluid"
+                             style="height: 38.5px;">
+                        </div>
+                        <div class="clients-logo">
+                            <img src=" {% static 'images/partners/admixer.jpg' %}"
+                            alt="admixer" class="img-fluid"
+                            style="height: 38.5px;">
+                        </div>
+                        <div class="clients-logo">
+                            <img src=" {% static 'images/partners/airpush.jpg' %}"
+                            alt="airpush" class="img-fluid"
+                            style="height: 38.5px;">
+                        </div>
+                        <div class="clients-logo">
+                            <img src="{% static 'images/clients/samsung.svg' %}" alt="Samsung" class="img-fluid">
+                        </div>
+                        <div class="clients-logo">
+                            <img src="{% static 'images/clients/paypal.svg' %}" alt="Paypal" class="img-fluid">
+                        </div>
+                        <div class="clients-logo">
+                            <img src="{% static 'images/clients/spotify.svg' %}" alt="Spotify" class="img-fluid">
+                        </div>
+                        <div class="clients-logo">
+                            <img src="{% static 'images/clients/amazon.svg' %}" alt="Amazon" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex flex-wrap justify-content-center">
+                        <div class="clients-logo">
+                            <img src="{% static 'images/clients/slack.svg' %}" alt="Slack" class="img-fluid">
+                        </div>
+                        <div class="clients-logo">
+                            <img src=" {% static 'images/partners/startapp.jpg' %}"
+                             alt="startapp" class="img-fluid"
+                             style="height: 38.5px;">
+                        </div>
+                        <div class="clients-logo">
+                            <img src=" {% static 'images/partners/admixer.jpg' %}"
+                            alt="admixer" class="img-fluid"
+                            style="height: 38.5px;">
+                        </div>
+                        <div class="clients-logo">
+                            <img src=" {% static 'images/partners/airpush.jpg' %}"
+                            alt="airpush" class="img-fluid"
+                            style="height: 38.5px;">
+                        </div>
+                        <div class="clients-logo">
+                            <img src="{% static 'images/clients/samsung.svg' %}" alt="Samsung" class="img-fluid">
+                        </div>
+                        <div class="clients-logo">
+                            <img src="{% static 'images/clients/paypal.svg' %}" alt="Paypal" class="img-fluid">
+                        </div>
+                        <div class="clients-logo">
+                            <img src="{% static 'images/clients/spotify.svg' %}" alt="Spotify" class="img-fluid">
+                        </div>
+                        <div class="clients-logo">
+                            <img src="{% static 'images/clients/amazon.svg' %}" alt="Amazon" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ol class="carousel-indicators">
+                <li data-target="#landingClientCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#landingClientCarousel" data-slide-to="1"></li>
+                <li data-target="#landingClientCarousel" data-slide-to="2"></li>
+            </ol>
+        </div>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5 mb-5">
+        <div class="container">
+            <h2>Our User's Review</h2>
+            <p class="text-muted mb-5">Check out what our users are saying </p>
+            <div class="row">
+                <div class="col-md-4 foi-review mb-5 mb-md-0">
+                    <div class="foi-rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                    <h5 class="foi-review-heading">I love the UI/UX Experience</h5>
+                    <p class="foi-review-content">Love the UI/UX experience, easy to use. 
+                        The Offline Messaging performs smoothly and effectively on my device. Wiconn has a promising Future.</p>
+                    <div class="media foi-review-user">
+                    <img src="{% static 'images/avatar/Elah.png' %}" alt="user" class="avatar">
+                        <div class="media-body">
+                            <h6 class="mb-0">Elah Chinyere</h6>
+                            
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4 foi-review mb-5 mb-md-0">
+                    <div class="foi-rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                    <h5 class="foi-review-heading">Amazing App</h5>
+                    <p class="foi-review-content">Amazing App. This is the best messaging App I have used in a while. 
+                        The best part is that it uses consumes less data. 
+                        It is very easy to use and it is both UI/UX friendly.</p>
+                    <div class="media foi-review-user">
+                        <img src="{% static 'images/avatar/Boma.png' %}" alt="user" class="avatar">
+                        <div class="media-body">
+                            <h6 class="mb-0">Boma Marshall</h6>
+                            
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4 foi-review mb-5 mb-md-0">
+                    <div class="foi-rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                    <h5 class="foi-review-heading">The Offline Messaging Works Perfectly</h5>
+                    <p class="foi-review-content">Tested the App on my device and to my surprise the offline messaging works perfectly. 
+                        I also love that you can also earn an income with this App.
+                        Good work Guys. 
+                        </p>
+                    <div class="media foi-review-user">
+                        <img src="{% static 'images/avatar/avatar_7.jpg' %}" alt="user" class="avatar">
+                        <div class="media-body">
+                            <h6 class="mb-0">Alexander Ross</h6>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5 mb-5">
+        <div class="container">
+           <a id="FAQ"> <h2 class="w3-center">FAQ</h2> </a>
+            <p class="section-subtitle w3-center">Frequently Asked Questions</p>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card mb-3 landing-faq-card">
+                        <div class="card-header bg-white" id="faqOneTitle">
+                            <a href="#faqOneCollapse" class="d-flex align-items-center" data-toggle="collapse">
+                                <h6 class="mb-0">What is Wiconn App?</h6> <i class="fa fa-plus-square ml-auto"></i>
+                            </a>
+                        </div>
+                        <div id="faqOneCollapse" class="collapse" aria-labelledby="faqOneTitle">
+                            <div class="card-body">
+                                <p class="mb-0 text-gray">Wiconn is a Social Media App that lets you Communicate and Chat with Friends and 
+                                    Family members with or without internet access on your Phone.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3 landing-faq-card">
+                        <div class="card-header bg-white" id="faqTwoTitle">
+                            <a href="#faqTwoCollapse" class="d-flex align-items-center" data-toggle="collapse">
+                                <h6 class="mb-0">What’s the Offline Range of Wiconn?</h6> <i class="fa fa-plus-square ml-auto"></i>
+                            </a>
+                        </div>
+                        <div id="faqTwoCollapse" class="collapse" aria-labelledby="faqTwoTitle">
+                            <div class="card-body">
+                                <p class="mb-0 text-gray">Wiconn’s offline communication range (i.e. without internet access) is Infinite, 
+                                    as long as they are devices within proximity to connect to. 
+                                    The more people connect to the Network, the faster and more resilient the network becomes. 
+                                    In order to cover a City, approximately 20% of its population should have 
+                                    Wiconn App downloaded on their phones for effective Communication.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3 landing-faq-card">
+                        <div class="card-header bg-white" id="faqThreeTitle">
+                            <a href="#faqThreeCollapse" class="d-flex align-items-center" data-toggle="collapse">
+                                <h6 class="mb-0">How Secure is Wiconn?</h6> <i class="fa fa-plus-square ml-auto"></i>
+                            </a>
+                        </div>
+                        <div id="faqThreeCollapse" class="collapse" aria-labelledby="faqThreeTitle">
+                            <div class="card-body">
+                                <p class="mb-0 text-gray">At Wiconn we take Privacy and Security very seriously , 
+                                    Wiconn is equipped with  top notch End to End Encryption, meaning that only the sender and 
+                                    receiver can view a message  except it is a group Chat. Wiconn is also empowered with 
+                                    Self -destruct messaging and ability to prevent people from screen shooting your private messages
+                                    .</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card mb-3 landing-faq-card">
+                        <div class="card-header bg-white" id="faqFourTitle">
+                            <a href="#faqFourCollapse" class="d-flex align-items-center" data-toggle="collapse">
+                                <h6 class="mb-0">Where Can Wiconn be Used?</h6> <i class="fa fa-plus-square ml-auto"></i>
+                            </a>
+                        </div>
+                        <div id="faqFourCollapse" class="collapse" aria-labelledby="faqFourTitle">
+                            <div class="card-body">
+                                <p class="mb-0 text-gray">Wiconn is effective in times of Natural Disasters Such as Flood, Earth Quakes, 
+                                    Tsunamis whereby in most cases telecommunication infrastructure are destroyed and no way of communication, 
+                                    also Wiconn can be used anywhere from School Campuses, Ships, Estates, Hiking Event and so much more.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3 landing-faq-card">
+                        <div class="card-header bg-white" id="faqFiveTitle">
+                            <a href="#faqFiveCollapse" class="d-flex align-items-center" data-toggle="collapse">
+                                <h6 class="mb-0">How can one Earn Money with Wiconn TV?</h6> <i class="fa fa-plus-square ml-auto"></i>
+                            </a>
+                        </div>
+                        <div id="faqFiveCollapse" class="collapse" aria-labelledby="faqFiveTitle">
+                            <div class="card-body">
+                                <p class="mb-0 text-gray">You Can Earn money by viewing Adverts which will be displayed on the portion of 
+                                    the App called Wiconn TV, the more time you spend watching those Adverts the more money you earn.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3 landing-faq-card">
+                        <div class="card-header bg-white" id="faqSixTitle">
+                            <a href="#faqSixCollapse" class="d-flex align-items-center" data-toggle="collapse">
+                                <h6 class="mb-0">How Long before Wiconn TV pays you?</h6> <i class="fa fa-plus-square ml-auto"></i>
+                            </a>
+                        </div>
+                        <div id="faqSixCollapse" class="collapse" aria-labelledby="faqSixTitle">
+                            <div class="card-body">
+                                <p class="mb-0 text-gray">Users are expected to cash out and wait between 48-72 Hours 
+                                    (This depends on your Bank) to be credited.
+                                    Please note:
+                                    You are expected to state your Account name and account number as registered in your Bank.
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="foi-footer text-white">
+        <div class="container">
+            <div class="row footer-content">
+                <div class="col-xl-6 col-lg-7 col-md-8">
+                    <h2 class="mb-0">Do you want to know more or just have a question? write to us via mail.</h2>
+                </div>
+                <div class="col-md-4 col-lg-5 col-xl-6 py-3 py-md-0 d-md-flex align-items-center justify-content-end">
+                    <a id=contact> <a href="mailto:email@gmail.com" class="btn btn-danger btn-lg">
+                         Contact Us 
+
+                    </a></a>
+                </div>
+            </div>
+            <div class="row footer-widget-area">
+                <div class="col-md-3">
+                    
+                        <p class="font-os font-weight-semibold mb3" style="padding-bottom:0px;">
+                        <img src="{% static 'images/mockup/WEICON2.svg' %}" alt="WICONN" class="w3-image"
+                        style="width: 70px;"><span style="font-weight: bolder; font-size: xx-large;">iconn</span> </p>
+                    
+                    <p class="font-os font-weight-semibold mb3">Get our mobile app</p>
+                    <div>
+                        <button class="btn btn-app-download mr-2"><img src="{% static 'images/ios.svg' %}" alt="App store"></button>
+                        <button class="btn btn-app-download"><img src="{% static 'images/android.svg' %}" alt="play store"></button>
+                    </div>
+                </div>
+                <div class="col-md-3 mt-3 mt-md-0">
+                    <nav class="w3-topbar">
+                        <ul class="nav flex-column" style="padding-top: 5px;">
+                            <li class="nav-item">
+                                <p>LINKS</p>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">Product</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">Contact</a>
+                            </li>
+                           
+                            
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-3 mt-3 mt-md-0">
+                    <nav class="w3-topbar w3-large">
+                        <ul class="nav flex-column" style="padding-top: 5px;">
+                            <li class="nav-item">
+                                <p>ABOUT</p>
+                            </li>
+                            <li class="nav-item" style="padding-bottom: 3px;">
+                                <span class="aboutf"> wiconn.business@gmail.com </span>
+                            </li>
+                            <li class="nav-item" style="padding-bottom: 3px;">
+                                 <span class="aboutf"> Tel: +2349027697687</span>
+                            </li>
+                            <li class="nav-item" style="padding-bottom: 3px;">
+                                <span class="aboutf"> No 2 Chukwuoke Street, Rumuigbo </span>
+                            </li>
+                            <li class="nav-item">
+                               <span class="aboutf"> Port Harcourt </span>
+                            </li>
+                            
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-3 mt-3 mt-md-0 w3-topbar">
+                    
+                    <p style="padding-top: 5px;">
+                        &copy; Wiconn. 2020 <a href="https://www.wiconn.com" 
+                        target="_blank" rel="noopener noreferrer" class="text-reset">wiconn.com</a>.
+                    </p>
+                    <p>All rights reserved.</p>
+                    <p style="padding-top: 5px;">SOCIAL</p>
+                    <nav class="social-menu">
+                        <a href="https://m.facebook.com/wiconn.business/?ref=bookmarks" target="_blank">
+                            <img src="{% static 'images/facebook.svg' %}" alt="facebook"></a>
+                        <a href="https://www.instagram.com/wiconn_1/" target="_blank">
+                            <img src="{% static 'images/instagram.svg' %}" alt="instagram"></a>
+                        <a href="https://mobile.twitter.com/EdwardEjiamike" target="_blank">
+                            <img src="{% static 'images/twitter.svg' %}" alt="twitter"></a>
+                        <a href="#!"><img src="{% static 'images/youtube.svg' %}" alt="youtube"></a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+
+
+     <!-- <jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/popper.min.js' %}"></script> 
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>  
+</body>
+
+</html>
