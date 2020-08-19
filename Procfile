@@ -1,0 +1,1 @@
+web: gunicorn wiconn_project.wsgi
