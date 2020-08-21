@@ -25,7 +25,7 @@ SECRET_KEY = 'vb6o4sskhvdf4uz+77$nytc@2avqku@8ql_@i#^#p20r=pfv^2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://wiconn.herokuapp.com/', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
