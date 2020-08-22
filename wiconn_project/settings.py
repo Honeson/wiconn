@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'wiconn_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': BASE_DIR / 'db4q5mmkpjhjk5',
         'HOST': 'ec2-18-214-211-47.compute-1.amazonaws.com',
         'PORT': 5432,
