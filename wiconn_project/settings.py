@@ -78,12 +78,12 @@ WSGI_APPLICATION = 'wiconn_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': BASE_DIR / 'db4q5mmkpjhjk5',
-        'HOST': 'ec2-18-214-211-47.compute-1.amazonaws.com',
-        'PORT': 5432,
-        'USER': 'wthhclflrfthcl',
-        'PASSWORD': '8a9581370cb14a7c31b2d6edcefb183d295d9618b40d59d428ce647b0f355bbf'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+       # 'HOST': 'ec2-18-214-211-47.compute-1.amazonaws.com',
+       # 'PORT': 5432,
+        #'USER': 'wthhclflrfthcl',
+        #'PASSWORD': '8a9581370cb14a7c31b2d6edcefb183d295d9618b40d59d428ce647b0f355bbf'
 
     }
 }
