@@ -70,13 +70,60 @@
 }
 .ifluid {
     width: auto;
-    height: 550px;
+    height: 470px;
   }
 
   @media screen and (max-width: 580px) {
       .ifluid {
-          width: 300px;
+          width: 400px;
           height: auto;
+      }
+  }
+
+  body {
+    margin: 0;
+  font-family: "DM Sans";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000000;
+  text-align: left;
+  background-color: #ffffff;
+  }
+
+  @media screen and (max-width: 580px) {
+      body {
+          font-size: 0.7rem;
+          font-weight: 300;
+      }
+  }
+
+  .get-started {
+    margin-left: 230px;
+  }
+
+  @media screen and (max-width: 580px) {
+      .get-started {
+          margin-left: 180px;
+      }
+  }
+  .get-mobile {
+    margin-left: 203px;
+  }
+
+  @media screen and (max-width: 580px){
+    .get-started {
+        margin-left: 150px;
+    }
+  }
+
+  #apple-google {
+    margin-left: 120px;
+  }
+
+  @media screen and (max-width: 580px){
+      #apple-google {
+          margin-left: 80px;
       }
   }
 
@@ -135,13 +182,12 @@
                         >Wiconn is a mobile App that lets you earn money monthly while communicating with
                             your friends for free even when you don't have internet access on your phone.
                         </p>
-                        <button class="btn btn-primary mb-4 " 
-                        style="margin-left: 230px; background-color: #4460f0;">Get Started</button>
+                        <button class="btn btn-primary mb-4 get-started" 
+                        style="background-color: #4460f0;">Get Started</button>
                         <div class="my-2">
-                            <p class="header-app-download-title"
-                            style="margin-left: 203px;">GET OUR MOBILE APP</p>
+                            <p class="header-app-download-title get-mobile">GET OUR MOBILE APP</p>
                         </div>
-                        <div style="margin-left: 120px;">
+                        <div id="apple-google">
                         <div class="w3-container w3-cell" style="margin-left: 50px;">
                         
                            <a href="#"> <img src="{% static 'images/apple.png' %}" alt="App store"
