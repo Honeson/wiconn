@@ -29,6 +29,12 @@
     background-position: left bottom, right top;
     }
 
+@media screen and (max-width: 580px) {
+    .foi-header.landing-header {
+        background-size: 167px, 30%;
+    }
+}
+
 .foi-footer {
     background-image: url("{% static 'images/mockup/footer_try.png' %}");
 }
@@ -128,6 +134,15 @@
       }
   }
 
+  #reduce {
+      font-size: default;
+  }
+  @media screen and (max-width: 580px) {
+      #reduce {
+          font-size: 20px;
+      }
+  }
+
 .aboutf {
     font-size: 15px;
     line-height: 2.33;
@@ -148,7 +163,8 @@
 
         <nav class="navbar navbar-expand-md navbar-light">
             <a href="{% url 'home' %}" class="navbar-brand">
-                <img src="{% static 'images/mockup/WEICON5.svg' %}" style="width: 100px; height: 100px;" alt="Wiconn Logo">
+                <img src="{% static 'images/mockup/WEICON5.svg' %}" 
+                style="width: 100px; height: 100px;" alt="Wiconn Logo" id="wiconnlogo">
                 
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -171,10 +187,10 @@
         <div class="container">
             
             <div class="header-content">
-                <div class="row" >
+                <div class="row">
                     <div class="col-md-6">
                         <br><br>
-                        <h1 class="w3-center">THE NEXT GENERATION OF MOBILE TECHNOLOGY</h1>
+                        <h1 class="w3-center" id="reduce">THE NEXT GENERATION OF MOBILE TECHNOLOGY</h1>
                         <p></p> 
                         <br>
                         <br>
@@ -310,7 +326,7 @@
                         Wiconn works by using the Bluetooth and Wifi radios located on your phone to communicate
                         directly with other devices within 300 feet apart. Wiconn works even when mobile
                         telecommunication fails us.
-                        <h6 class="text-gray font-os font-weight-semibold">Trusted by the world's best</h6>
+                        <h6 class="text-gray font-os font-weight-semibold">Our Partners</h6>
         <div id="landingClientCarousel" class="carousel slide landing-client-carousel" data-ride="carousel">
             <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active">
