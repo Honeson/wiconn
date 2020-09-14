@@ -5680,6 +5680,12 @@ button.bg-dark:focus {
 .my-5 {
   margin-bottom: 3rem !important; }
 
+  @media screen and (max-width:580px) {
+    .my-5 {
+      margin-bottom: 1rem !important;
+    }
+  }
+
 .ml-5,
 .mx-5 {
   margin-left: 3rem !important; }
@@ -5869,6 +5875,12 @@ button.bg-dark:focus {
 .pb-5,
 .py-5 {
   padding-bottom: 3rem !important; }
+
+  @media screen and (max-width:580px) {
+    .py-5 {
+      padding-bottom: 1rem !important;
+    }
+  }
 
 .pl-5,
 .px-5 {
