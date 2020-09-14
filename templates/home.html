@@ -117,7 +117,7 @@
   }
   @media only screen and (min-width: 600px) {
       .get-mobile {
-          margin-left: 38px;
+          margin-left: 45px;
       }
   }
   
@@ -153,6 +153,28 @@
 
       }
   }
+
+  #appleicon {
+    width: 125px; 
+    height: 35px; 
+    margin-top: 8px;
+  }
+  @media only screen and (min-width: 600px) {
+      #appleicon {
+          width: 132px;
+          height: 39px;
+      }
+  }
+  #googleicon {
+    width: 135px; 
+    height: 53px;
+  }
+  @media only screen and (min-width: 600px) {
+      #googleicon {
+      width: 142px;
+      height: 57px;
+  }
+}
 .ifluid {
     width: 592;
   height: 600px;
@@ -230,13 +252,11 @@
                         <div class="w3-container w3-cell" style="margin-left: 50px;">
                         
                            <a href="#"> <img src="{% static 'images/apple.png' %}" alt="App store"
-                            class="w3-image" 
-                            style="width: 125px; height: 35px; margin-top: 8px;"></a>
+                            class="w3-image" id="appleicon"></a>
                         </div>
                         <div class="w3-container w3-cell">
                             <a href="#"><img src="{% static 'images/google.png' %}" alt="play store"
-                            class="w3-image"  
-                            style="width: 135px; height: 53px;"></a>
+                            class="w3-image" id="googleicon"></a>
                         </div>
                        </div>
                     </div>
