@@ -204,16 +204,9 @@ width: 592;
     }
     
 }
-#allrights {
-    font-size: large;
-}
 
-@media only screen and (min-width: 600px) {
-    #allrights {
-        font-size: small;
-    }
     
-}
+
 /*
 #wiconnlogo {
     width: 100px; height: 100px;
@@ -275,8 +268,8 @@ a.w3-right{
 <body">
     <header class="foi-header landing-header" style="margin-left: 2px;">
 
-    <!--
-        <nav class="navbar navbar-expand-md navbar-light">
+    
+        <nav class="navbar navbar-expand-md navbar-light w3-hide-medium w3-hide-large">
             <a href="{% url 'home' %}" class="navbar-brand">
                 <img src="{% static 'images/mockup/WEICON5.svg' %}" 
                  alt="Wiconn Logo" id="wiconnlogo">
@@ -298,8 +291,8 @@ a.w3-right{
                 </div>
             </div>
         </nav>
-    -->
-        <div class="w3-bar">
+    
+        <div class="w3-bar w3-hide-small">
             <a href="{% url 'home' %}">
                 <img src="{% static 'images/mockup/WEICON5.svg' %}" 
                  alt="Wiconn Logo" id="wiconnlogo">
@@ -737,10 +730,10 @@ a.w3-right{
                                 <p>ABOUT</p>
                             </li>
                             <li class="nav-item" style="padding-bottom: 3px;">
-                                <span class="aboutf;"> wiconn.business@gmail.com </span>
+                                <span class="aboutf;">+2349027697687  </span>
                             </li>
                             <li class="nav-item" style="padding-bottom: 3px;">
-                                 <span class="aboutf"> Tel: +2349027697687</span>
+                                 <span class="aboutf">wiconn.business@gmail.com</span>
                             </li>
                             <li class="nav-item" style="padding-bottom: 3px;">
                                 <span class="aboutf"> No 2 Chukwuoke Street, Rumuigbo </span>
@@ -754,11 +747,12 @@ a.w3-right{
                 </div>
                 <div class="col-md-3 mt-3 mt-md-0 w3-topbar mlt">
                     
-                    <p style="padding-top: 5px;">
+                    <p style="padding-top: 5px; padding-left: 2px;">
                         &copy; Wiconn. 2020 <a href="https://www.wiconn.com" 
                         target="_blank" rel="noopener noreferrer" class="text-reset"><br>wiconn.info</a>.
                     
                     <br><span id="allrights">All rights reserved.</span></p>
+                    <br>
                     <p style="padding-top: 5px;">SOCIAL</p>
                     <nav class="social-menu">
                         <a href="https://m.facebook.com/wiconn.business/?ref=bookmarks" target="_blank">
