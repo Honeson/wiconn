@@ -21,7 +21,7 @@
         font-size: 16px
     }
 
-    @media screen and (max-width: 580px) {
+    @media screen and (max-width: 600px) {
         body {
             font-size: 12px;
         }
@@ -35,7 +35,7 @@
     background-position: left bottom, right top;
     }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 600px) {
     .foi-header.landing-header {
         background-size: 40px, 60%;
         margin-top: 20px, 0px;
@@ -53,10 +53,14 @@
 .checked {
     color: orange;
 }
-
-.coo {
-    background-color: #4460f0;
-    padding: 5px;
+a.about {
+    color: white;
+    padding: 5px; 
+    font-weight: bolder; 
+    
+}
+a.about:hover {
+    color: white;
 }
 
 
@@ -64,7 +68,7 @@
     font-size: x-large; 
     margin-left: 40px;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
     .para {
     margin-left: 5px;
   }
@@ -90,7 +94,7 @@
   overflow-x: hidden;
   }
 
-  @media screen and (max-width: 580px) {
+  @media screen and (max-width: 600px) {
       body {
           font-size: 0.7rem;
           font-weight: 300;
@@ -101,7 +105,7 @@
     margin-left: 230px;
   }
 
-  @media screen and (max-width: 580px) {
+  @media screen and (max-width: 600px) {
       .get-started {
           margin-left: 103px;
       }
@@ -115,7 +119,7 @@
     margin-left: 203px;
   }
 
-  @media screen and (max-width: 580px){
+  @media screen and (max-width: 600px){
     .get-mobile {
         margin-left: 70px;
         
@@ -132,7 +136,7 @@
     margin-left: 120px;
   }
 
-  @media screen and (max-width: 580px){
+  @media screen and (max-width: 600px){
       #apple-google {
           margin-left: 15px;
       }
@@ -146,7 +150,7 @@
   #reduce {
       font-size: default;
   }
-  @media screen and (max-width: 580px) {
+  @media screen and (max-width: 600px) {
       #reduce {
           font-size: 30px;
       }
@@ -186,12 +190,32 @@
   height: 600px;
 }
 
-@media screen and (max-width: 580px){
+@media screen and (max-width: 600px){
     .ifluid {
     width: 490px;
     height: auto;
     }
     
+}
+
+#wiconnlogo {
+    width: 100px; height: 100px;
+}
+
+@media only screen and (min-width: 600px) {
+    #wiconnlogo {
+        width: 80px;
+        height: 120px;
+    }
+}
+
+.text-dark {
+    font-size: x-large;
+}
+@media screen and (max-width: 600px) {
+    .text-dark {
+        font-size: small;
+    }
 }
 .aboutf {
     font-size: 15px;
@@ -201,8 +225,6 @@
     padding: 0;
     font-family: 'Open Sans', sans-serif;
 }
-
-
 
 </style>
 
@@ -214,7 +236,7 @@
         <nav class="navbar navbar-expand-md navbar-light">
             <a href="{% url 'home' %}" class="navbar-brand">
                 <img src="{% static 'images/mockup/WEICON5.svg' %}" 
-                style="width: 100px; height: 100px;" alt="Wiconn Logo" id="wiconnlogo">
+                 alt="Wiconn Logo" id="wiconnlogo">
                 
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -224,12 +246,12 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ml-auto coo">
                     
-                    <a class="nav-item nav-link" href="{% url 'home' %}"
-                    style="color: white;">Home <span class="sr-only">(current)</span></a>
-                    <a href="#about" class="nav-item nav-link" style="color: white;">About</a>
-                    <a href="#features" class="nav-item nav-link" style="color: white;">How It Works</a>
-                    <a href="#FAQ" class="nav-item nav-link" style="color: white;">FAQs</a>
-                    <a href="#contact" class="nav-item nav-link" style="color: white;">Contact</a>
+                    <a class="nav-item nav-link about" href="{% url 'home' %}"
+                    >Home <span class="sr-only">(current)</span></a>
+                    <a href="#about" class="nav-item nav-link about">About</a>
+                    <a href="#features" class="nav-item nav-link about">How It Works</a>
+                    <a href="#FAQ" class="nav-item nav-link about">FAQs</a>
+                    <a href="#contact" class="nav-item nav-link about">Contact</a>
                 </div>
             </div>
         </nav>
@@ -291,7 +313,7 @@
                     <h3 class="w3-center" style="padding-top: 15px;">No Internet Required</h3>
                     <p></p>
                     <p class="text-dark"
-                    style="font-size: x-large;">Works even without any internet connection or mobile reception.
+                    >Works even without any internet connection or mobile reception.
                         Devices connect directly with one another using Bluetooth and Wifi within 300 feet of
                         their location
                     </p>
@@ -302,7 +324,7 @@
                     <h3 class="w3-center" style="padding-top: 6px;"> Security</h3>
                     <p></p>
                     <p class="text-dark"
-                    style="font-size: x-large;">Wiconn is empowered with end to end encryption, self destruct 
+                    >Wiconn is empowered with end to end encryption, self destruct 
                     messaging and ability to prevent your chat from being screenshot; this features ensure 
                     the safety and security of our users.
                 </p>
@@ -314,7 +336,7 @@
                     <h3 class="w3-center" style="padding-top: 6px;">Earn with Wiconn</h3>
                     <p></p>
                     <p class="text-dark"
-                    style="font-size: x-large; padding-left: 6px;">Earn money with Wiconn by watching video and interstitial ads
+                    style="padding-left: 6px;">Earn money with Wiconn by watching video and interstitial ads
                     on the portion of the app called TV Ads; the more time you spend watching Ads on Wiconn TV Ads
                     the more money you make.
                 </p>
@@ -379,7 +401,7 @@
                 <div class="w3-half w3-center">
                     <a id="features"><h2 class="section-title">HOW IT WORKS</h2> </a>
                     <p></p>
-                    <p class="mb-5 w3-xlarge">Wiconn meaning wireless connect is a free peer-to-peer messaging Application
+                    <p class="mb-5 text-dark">Wiconn meaning wireless connect is a free peer-to-peer messaging Application
                         that works with or without internet access or cellular reception to send text and images.
                         Wiconn works by using the Bluetooth and Wifi radios located on your phone to communicate
                         directly with other devices within 300 feet apart. Wiconn works even when mobile
@@ -675,9 +697,9 @@
                     
                     <p style="padding-top: 5px;">
                         &copy; Wiconn. 2020 <a href="https://www.wiconn.com" 
-                        target="_blank" rel="noopener noreferrer" class="text-reset">wiconn.info</a>.
-                    </p>
-                    <p>All rights reserved.</p>
+                        target="_blank" rel="noopener noreferrer" class="text-reset"><br>wiconn.info</a>.
+                    
+                    <br>All rights reserved.</p>
                     <p style="padding-top: 5px;">SOCIAL</p>
                     <nav class="social-menu">
                         <a href="https://m.facebook.com/wiconn.business/?ref=bookmarks" target="_blank">
