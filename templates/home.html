@@ -186,7 +186,7 @@ a.about:hover {
   }
 }
 .ifluid {
-    width: 592;
+width: 592;
   height: 600px;
 }
 
@@ -197,7 +197,14 @@ a.about:hover {
     }
     
 }
-
+@media only screen and (min-width: 580px){
+    .ifluid {
+    width: 490px;
+    height: auto;
+    }
+    
+}
+/*
 #wiconnlogo {
     width: 100px; height: 100px;
 }
@@ -208,14 +215,37 @@ a.about:hover {
         height: 120px;
     }
 }
+*/
+
+a.w3-right{
+    text-decoration: none;
+    color: white;
+    font-size: larger;
+    
+}
+@media screen and (max-width: 600px) {
+    a.w3-right {
+    color:  #4460f0;
+    text-align: left;
+}
+    
+}
 
 .text-dark {
     font-size: x-large;
 }
 @media screen and (max-width: 600px) {
     .text-dark {
-        font-size: small;
+        font-size: large;
     }
+}
+.mlt {
+    text-align: left;
+}
+@media only screen and (max-width: 600px) {
+    .mlt {
+    text-align: right;
+}
 }
 .aboutf {
     font-size: 15px;
@@ -233,6 +263,7 @@ a.about:hover {
 <body">
     <header class="foi-header landing-header" style="margin-left: 2px;">
 
+    <!--
         <nav class="navbar navbar-expand-md navbar-light">
             <a href="{% url 'home' %}" class="navbar-brand">
                 <img src="{% static 'images/mockup/WEICON5.svg' %}" 
@@ -255,6 +286,22 @@ a.about:hover {
                 </div>
             </div>
         </nav>
+    -->
+        <div class="w3-bar">
+            <a href="{% url 'home' %}">
+                <img src="{% static 'images/mockup/WEICON5.svg' %}" 
+                 alt="Wiconn Logo" id="wiconnlogo">
+                
+            </a>
+            <a href="#contact" class="w3-bar-item w3-mobile w3-right">Contact</a>
+            <a href="#FAQ" class="w3-bar-item w3-mobile w3-right">FAQs</a>
+            <a href="#features" class="w3-bar-item  w3-mobile w3-right">How it Works</a>
+            <a href="#about" class="w3-bar-item  w3-mobile w3-right">About</a>
+            <a href="{% url 'home' %}" class="w3-bar-item w3-mobile w3-right">Home</a>
+            
+           
+           
+          </div>
 
         <div class="container">
             
@@ -693,7 +740,7 @@ a.about:hover {
                         </ul>
                     </nav>
                 </div>
-                <div class="col-md-3 mt-3 mt-md-0 w3-topbar">
+                <div class="col-md-3 mt-3 mt-md-0 w3-topbar mlt">
                     
                     <p style="padding-top: 5px;">
                         &copy; Wiconn. 2020 <a href="https://www.wiconn.com" 
